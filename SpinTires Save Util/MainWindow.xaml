@@ -1,0 +1,39 @@
+﻿<Window x:Class="SpinTires_Save_Util.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="SpinTires Save Util" Height="266" Width="358" ResizeMode="CanMinimize" SizeToContent="WidthAndHeight"
+        Loaded="Window_Loaded" Icon="icon.ico">
+    <Grid>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="233" VerticalAlignment="Top" Width="348"/>
+        <Button x:Name="bFAQ" Content="FAQ/HELP/ABOUT" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="326" Click="bFAQ_Click"/>
+        <Label Content="MAPS:" HorizontalAlignment="Left" Margin="10,35,0,0" VerticalAlignment="Top"/>
+        <Label Content="SAVES:" HorizontalAlignment="Left" Margin="131,35,0,0" VerticalAlignment="Top"/>
+        <ListBox x:Name="lbMaps" HorizontalAlignment="Left" Height="136" Margin="10,61,0,0" VerticalAlignment="Top" Width="116"/>
+        <ListBox x:Name="lbSaves" HorizontalAlignment="Left" Height="136" Margin="131,61,0,0" VerticalAlignment="Top" Width="116"/>
+        <Button x:Name="bSaveAs" HorizontalAlignment="Left" Margin="252,61,0,0" VerticalAlignment="Top" Width="84" Height="Auto" Click="bSaveAs_Click">
+            <Grid>
+                <TextBlock TextWrapping="Wrap">
+                    Save selected map as:
+                </TextBlock>
+            </Grid>
+        </Button>
+        <TextBox x:Name="tbSaveName" HorizontalAlignment="Left" Height="23" Margin="252,102,0,0" TextWrapping="Wrap" Text="mySave1" VerticalAlignment="Top" Width="84" Foreground="#FF767676"/>
+        <Button x:Name="bLoadSave" HorizontalAlignment="Left" Margin="252,130,0,0" VerticalAlignment="Top" Width="84" Height="Auto" Click="bLoadSave_Click">
+            <Grid>
+                <TextBlock TextWrapping="Wrap">
+                    Load selected save
+                </TextBlock>
+            </Grid>
+        </Button>
+        <Button x:Name="bLoadSaveAndRun" HorizontalAlignment="Left" Margin="252,171,0,0" VerticalAlignment="Top" Width="84" Height="Auto" Click="bLoadSaveAndRun_Click">
+            <Grid>
+                <TextBlock TextWrapping="Wrap">
+                    Start game with selected save
+                </TextBlock>
+            </Grid>
+        </Button>
+        <Button x:Name="bRunSaveguard" Content="Run SaveGuard" HorizontalAlignment="Left" Margin="10,203,0,0" VerticalAlignment="Top" Width="116" Click="bRunSaveguard_Click"/>
+        <Button x:Name="bDeleteSave" Content="DELETE SAVE" HorizontalAlignment="Left" Margin="131,203,0,0" VerticalAlignment="Top" Width="116" Click="bDeleteSave_Click"/>
+        <Button x:Name="bSelectLastMap" Content="Select last map" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="57,36,0,0" FontSize="9" Click="bSelectLastMap_Click" Height="20" Width="69" IsEnabled="False"/>
+    </Grid>
+</Window>
